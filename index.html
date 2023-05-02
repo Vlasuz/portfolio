@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Webline</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Website">
+  <meta name="keywords" content="Website">
+  <!-- Montserrat FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+  <!-- ** MAIN STYLE ** -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- !! Import all CSS scripts in scss includes !! -->
+</head>
+
+<body>
+  <section class="banner">
+    <div class="wrapper">
+      <h1>Frontend developer</h1>
+    </div>
+  </section>
+  <section class="contacts">
+    <div class="wrapper">
+      <h2><span>Contact</span> me</h2>
+      <ul>
+        <li><a href="https://t.me/VZ_Web" target="_blanc"><b><i>Telegram: </i></b><span>
+                <u>@VZ_Web</u></span></a>
+        </li>
+        <li><a href="viber://chat?number=+380988769432" target="_blanc"><b><i>Viber: </i></b><span>
+                <u>+380 (98) 876 94 32</u></span></a>
+        </li>
+        <li><a href="https://wa.me/whatsappphonenumber?text=+380988769432" target="_blanc"><b><i>WhatsApp: </i></b><span>
+                <u>+380 (98) 876 94 32</u></span></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="about">
+    <div class="wrapper">
+      <h2>A LITTLE BIT <span>ABOUT YOURSELF</span></h2>
+      <div class="sides about__sides">
+        <div class="sides__lft">
+          <p>Hello everyone, my name is Vlas,<span> I am from Ukraine from the city of Kharkov.</span> Today, I am engaged in frontend development, namely <b>React JS</b>. I also practice Laravel for backend and flutter for mobile app development.</p>
+          <p>I work in Ukrainian freelance where I am the best frontend developer. So you can safely say that I will do your job and bring it to the final.</p>
+          <p>Giving work to me, you can be sure that everything will be done as it should, and most importantly, on time!</p>
+          <p>I will be glad to cooperate!</p>
+          <h3>My skills and knowledge🧑‍💻:</h3>
+          <ol>
+            <li>HTML5 (PUG) (7+ years);</li>
+            <li>CSS3 (SCSS) (7+ years);</li>
+            <li>JavaScript (7+ years);</li>
+            <li>Flexbox (7+ years);</li>
+            <li>Cross-browser compatibility (5+ years);</li>
+            <li>Adaptability for all devices (from 4K to 320px) (6+ years);</li>
+            <li>Multilingual sites (2+ years);</li>
+            <li>Git (4+ years);</li>
+            <li>React JS (2+ years);</li>
+            <li>Redux (2+ years);</li>
+            <li>Redux toolkit (2+ years);</li>
+            <li>Laravel (2+ years);</li>
+          </ol>
+        </div>
+        <div class="sides__rht">
+          <img src="img/photo.png" alt="Photo">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="portfolio">
+    <div class="wrapper">
+      <h2>My <span>portfolio</span></h2>
+      <ul class="portfolio__list">
+        <li class="portfolio__item">
+          <a href="http://www.smallstash.gg/" target="_blanc">
+            <div class="item__photo">
+              <img src="img/smallstash.png" alt="Photo">
+            </div>
+            <div class="item__title">SmallStash – A site with a gameplay similar to the game rust (React JS/Python Django)</div>
+          </a>
+        </li>
+        <li class="portfolio__item">
+          <a href="https://webline.space/projects/rumassa/">
+            <div class="item__photo">
+              <img src="img/ph4.png" alt="Photo">
+            </div>
+            <div class="item__title">rumassa – online store of steroids
+              <br>(Only HTML&CSS)</div>
+          </a>
+        </li>
+        <li class="portfolio__item">
+          <a href="https://webline.space/projects/luxuryCars/">
+            <div class="item__photo">
+              <img src="img/cars_germany.png" alt="Photo">
+            </div>
+            <div class="item__title">Premium cars from Germany
+              <br>(HTML&CSS/Wordpress)</div>
+          </a>
+        </li>
+        <li class="portfolio__item">
+          <a href="https://webline.space/projects/integra/index.html">
+            <div class="item__photo">
+              <img src="img/integra.png" alt="Photo">
+            </div>
+            <div class="item__title">INTEGRA 3 – Personal electronic device conducive - correcting posture (HTML&CSS/Wordpress)</div>
+          </a>
+        </li>
+        <li class="portfolio__item">
+          <a href="https://webline.space/projects/handmade/">
+            <div class="item__photo">
+              <img src="img/handmade.png" alt="Photo">
+            </div>
+            <div class="item__title">landing page handmade – design and develop digital products (Only HTML&CSS)</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- ** FOOTER ** -->
+  <footer></footer>
+  <!-- ** FOOTER ** -->
+  <script>
+    let portfolioItem 	= document.querySelectorAll('.portfolio__item')
+      let popupsItem 		= document.querySelectorAll('.popups .popup')
+      let popupsClose 	= document.querySelectorAll('.popups .popup__close, .popups .popup__bgd')
+      
+      portfolioItem.forEach((item, itemNum) => {
+      
+      	item.addEventListener('mousemove', function() {
+      		portfolioItem.forEach((item2) => {
+      			item2.style.opacity = '0.5'
+      		})
+      		this.style.opacity = '1'
+      	})
+      
+      	item.addEventListener('mouseleave', function() {
+      		portfolioItem.forEach((item2) => {
+      			item2.style.opacity = '1'
+      		})
+      	})
+      
+      	item.addEventListener('click', function(e, w) {
+      		popupsItem[itemNum].classList.add('popup_active')
+      	})
+      
+      })
+      
+      popupsClose.forEach((close) => {
+      	close.addEventListener('click', () => {
+      		for( let popupItemLi of popupsItem ){
+      			popupItemLi.classList.remove('popup_active')
+      		}
+      	})
+      })
+  </script>
+  <!-- main JS -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

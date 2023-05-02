@@ -1,0 +1,113 @@
+extends includes/head.pug
+block body
+
+	body
+		//- include includes/header.pug
+
+		section.banner
+			.wrapper
+				h1 Frontend developer
+
+		section.contacts
+			.wrapper
+
+				h2
+					span Contact
+					|  me
+
+				ul
+					li
+						a(href="https://t.me/VZ_Web" target="_blanc")
+							b
+								i Telegram: 
+							span
+								u @VZ_Web
+					li
+						a(href="viber://chat?number=+380988769432" target="_blanc")
+							b
+								i Viber: 
+							span
+								u +380 (98) 876 94 32
+					li
+						a(href="https://wa.me/whatsappphonenumber?text=+380988769432" target="_blanc")
+							b
+								i WhatsApp: 
+							span
+								u +380 (98) 876 94 32
+
+		section.about
+			.wrapper
+
+				h2 A LITTLE BIT 
+					span ABOUT YOURSELF
+				.sides.about__sides
+
+					.sides__lft
+
+						p Hello everyone, my name is Vlas,
+							span  I am from Ukraine from the city of Kharkov.
+							|  Today, I am engaged in frontend development, namely <b>React JS</b>. I also practice Laravel for backend and flutter for mobile app development.
+						p I work in Ukrainian freelance where I am the best frontend developer. So you can safely say that I will do your job and bring it to the final.
+						p Giving work to me, you can be sure that everything will be done as it should, and most importantly, on time!
+						p I will be glad to cooperate!
+
+						h3 My skills and knowledge🧑‍💻:
+						ol
+							li HTML5 (PUG) (7+ years);
+							li CSS3 (SCSS) (7+ years);
+							li JavaScript (7+ years);
+							li Flexbox (7+ years);
+							li Cross-browser compatibility (5+ years);
+							li Adaptability for all devices (from 4K to 320px) (6+ years);
+							li Multilingual sites (2+ years);
+							li Git (4+ years);
+							li React JS (2+ years);
+							li Redux (2+ years);
+							li Redux toolkit (2+ years);
+							li Laravel (2+ years);
+					.sides__rht
+						img(src="img/photo.png" alt="Photo")
+
+		include includes/portfolio-page.pug
+
+
+
+		include includes/footer.pug
+
+		script.
+			let portfolioItem 	= document.querySelectorAll('.portfolio__item')
+			let popupsItem 		= document.querySelectorAll('.popups .popup')
+			let popupsClose 	= document.querySelectorAll('.popups .popup__close, .popups .popup__bgd')
+
+			portfolioItem.forEach((item, itemNum) => {
+
+				item.addEventListener('mousemove', function() {
+					portfolioItem.forEach((item2) => {
+						item2.style.opacity = '0.5'
+					})
+					this.style.opacity = '1'
+				})
+
+				item.addEventListener('mouseleave', function() {
+					portfolioItem.forEach((item2) => {
+						item2.style.opacity = '1'
+					})
+				})
+
+				item.addEventListener('click', function(e, w) {
+					popupsItem[itemNum].classList.add('popup_active')
+				})
+
+			})
+
+			popupsClose.forEach((close) => {
+				close.addEventListener('click', () => {
+					for( let popupItemLi of popupsItem ){
+						popupItemLi.classList.remove('popup_active')
+					}
+				})
+			})
+
+
+
+		include includes/scripts.pug

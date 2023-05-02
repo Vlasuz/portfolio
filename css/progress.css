@@ -1,0 +1,133 @@
+.progress .wrapper {
+  position: relative
+}
+.progress__item {
+  width: 25%
+}
+.progress__item small {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 159.4%;
+  color: rgba(255,255,255,.6)
+}
+.progress__item h3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 159.4%;
+  margin-top: 4px;
+  color: #fff
+}
+.progress__item p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 159.4%;
+  color: #fff;
+  margin-top: 88px;
+  max-width: 210px
+}
+.progress__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.progress__line {
+  background: rgba(255,255,255,.2);
+  height: 3px;
+  width: calc(100% - 36px);
+  position: absolute;
+  left: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 85px
+}
+.progress__line .line__points {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 2
+}
+.progress__line .line__done {
+  background: #1f57d3;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 1
+}
+.progress__line .point {
+  background: #1f57d3;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  width: 18px;
+  height: 18px
+}
+@media screen and (max-width:900px) {
+  .progress__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+  }
+  .progress__item {
+    min-height: 240px;
+    margin-left: 40px;
+    width: 100%
+  }
+  .progress__item p {
+    margin-top: 13px
+  }
+  .progress__line .line__done {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease
+  }
+  .progress__line {
+    display: block;
+    height: 738px;
+    width: 3px;
+    top: 0
+  }
+  .progress__line .point:last-child {
+    display: none
+  }
+  .progress__line .line__points {
+    margin-top: -50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 2
+  }
+}
