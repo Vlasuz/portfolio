@@ -17,7 +17,7 @@
 <body>
   <section class="banner">
     <div class="wrapper">
-      <h1>Frontend developer</h1>
+      <h1>Website developer</h1>
     </div>
   </section>
   <section class="contacts">
@@ -41,24 +41,34 @@
       <h2>A LITTLE BIT <span>ABOUT YOURSELF</span></h2>
       <div class="sides about__sides">
         <div class="sides__lft">
-          <p>Hello everyone, my name is Vlas,<span> I am from Ukraine from the city of Kharkov.</span> Today, I am engaged in frontend development, namely <b>React JS</b>. I also practice Laravel for backend and flutter for mobile app development.</p>
+          <p>Hello everyone, my name is Vlas,<span> I am from Ukraine from the city of Kremenchug.</span> Today, I am engaged in frontend development, namely <b>React JS</b>. I also practice Laravel for backend and flutter for mobile app development.</p>
           <p>I work in Ukrainian freelance where I am the best frontend developer. So you can safely say that I will do your job and bring it to the final.</p>
           <p>Giving work to me, you can be sure that everything will be done as it should, and most importantly, on time!</p>
           <p>I will be glad to cooperate!</p>
-          <h3>My skills and knowledge🧑‍💻:</h3>
+          <h3>My skills and knowledge for Frontend🧑‍💻:</h3>
           <ol>
-            <li>HTML5 (PUG) (7+ years);</li>
-            <li>CSS3 (SCSS) (7+ years);</li>
-            <li>JavaScript (7+ years);</li>
-            <li>Flexbox (7+ years);</li>
-            <li>Cross-browser compatibility (5+ years);</li>
-            <li>Adaptability for all devices (from 4K to 320px) (6+ years);</li>
-            <li>Multilingual sites (2+ years);</li>
-            <li>Git (4+ years);</li>
-            <li>React JS (2+ years);</li>
-            <li>Redux (2+ years);</li>
-            <li>Redux toolkit (2+ years);</li>
-            <li>Laravel (2+ years);</li>
+            <li>HTML5</li>
+            <li>PUG</li>
+            <li>CSS3</li>
+            <li>SCSS</li>
+            <li>JavaScript</li>
+            <li>Cross-browser compatibility</li>
+            <li>Adaptive design (from 4K to 320px)</li>
+            <li>React JS</li>
+            <li>Redux</li>
+          </ol>
+          <h3>My skills and knowledge for Backend🧑‍💻:</h3>
+          <ol>
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>Docker</li>
+            <li>RESTful API</li>
+            <li>MySQL</li>
+            <li>Redis</li>
+            <li>Socket.io</li>
+            <li>Eloquent</li>
+            <li>Query</li>
+            <li>Wordpress</li>
           </ol>
         </div>
         <div class="sides__rht">
@@ -119,40 +129,6 @@
   <!-- ** FOOTER ** -->
   <footer></footer>
   <!-- ** FOOTER ** -->
-  <script>
-    let portfolioItem 	= document.querySelectorAll('.portfolio__item')
-      let popupsItem 		= document.querySelectorAll('.popups .popup')
-      let popupsClose 	= document.querySelectorAll('.popups .popup__close, .popups .popup__bgd')
-      
-      portfolioItem.forEach((item, itemNum) => {
-      
-      	item.addEventListener('mousemove', function() {
-      		portfolioItem.forEach((item2) => {
-      			item2.style.opacity = '0.5'
-      		})
-      		this.style.opacity = '1'
-      	})
-      
-      	item.addEventListener('mouseleave', function() {
-      		portfolioItem.forEach((item2) => {
-      			item2.style.opacity = '1'
-      		})
-      	})
-      
-      	item.addEventListener('click', function(e, w) {
-      		popupsItem[itemNum].classList.add('popup_active')
-      	})
-      
-      })
-      
-      popupsClose.forEach((close) => {
-      	close.addEventListener('click', () => {
-      		for( let popupItemLi of popupsItem ){
-      			popupItemLi.classList.remove('popup_active')
-      		}
-      	})
-      })
-  </script>
   <!-- main JS -->
   <script src="js/main.js"></script>
 </body>
